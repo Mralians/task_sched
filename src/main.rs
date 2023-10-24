@@ -29,6 +29,9 @@ impl Process {
         match self.sched {
             SCHED_OTHER => "SCHED_OTHER",
             SCHED_FIFO => "SCHED_FIFO",
+            SCHED_RR => "SCHED_RR",
+            SCHED_BATCH => "SCHED_BATCH",
+            SCHED_IDLE => "SCHED_IDLE",
             _ => "Unknown",
         }
     }
@@ -88,4 +91,3 @@ fn main() {
         println!("{}", process);
     }
 }
-
